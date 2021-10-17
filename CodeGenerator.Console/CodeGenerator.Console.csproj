@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DtoGenerator.cs" />
+    <Compile Remove="GenerateDtoAttribute.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\CodeGenerator.Core\CodeGenerator.Core.csproj" />
+	  <ProjectReference Include="..\CodeGenerator.NetStandard\CodeGenerator.NetStandard.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	  <!--<ProjectReference Include="..\CodeGenerator.NetStandard\CodeGenerator.NetStandard.csproj" />-->
+  </ItemGroup>
+
+</Project>
